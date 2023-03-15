@@ -31,7 +31,7 @@ jobs:
       pull-requests: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: read tag
         run: |
           # if this workflow was launched from a tag, use that tag (ex: libon-lite-2.0-RC3), otherwise leave the tag blank
