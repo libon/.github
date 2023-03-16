@@ -9,7 +9,9 @@ on:
     tags:
       - '**'
   workflow_call:
-
+    secrets:
+      GH_TOKEN:
+          required: false
   # pull_request event is required only for autolabeler
   # pull_request:
     # Only following types are handled by the action, but one can default to all as well
@@ -44,4 +46,4 @@ jobs:
           version: ${{ env.TAG }}
           publish: ${{ startsWith(github.ref, 'refs/tags') }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
