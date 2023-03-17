@@ -6,8 +6,10 @@ Repository dedicated to Libon GitHub shared config & workflows.
 
 ## Generate release and changelog on your project
 
-To use this common GitHub Action, you need to add the file below in your repository in the path
-`.github/workflows/release-workflow.yml`
+- If your repository already have at least a tag, do a release manually on GitHub on the latest tag. This is needed 
+  otherwise the first release note written by the job will contain all changelog from your repository. 
+
+- Add the file below in your repository in the path `.github/workflows/release-workflow.yml`
 
 ```yaml
 name: Release Drafter
