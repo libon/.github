@@ -30,7 +30,7 @@ jobs:
       pull-requests: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.4.0
+      - uses: actions/checkout@v3.5.2
       - name: read tag
         run: |
           # if this workflow was launched from a tag, use that tag, otherwise leave the tag blank
