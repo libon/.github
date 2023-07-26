@@ -36,7 +36,7 @@ jobs:
           # if this workflow was launched from a tag, use that tag, otherwise leave the tag blank
           echo TAG=$([[ $GITHUB_REF == refs/tags/* ]] && echo $GITHUB_REF | sed -e  "s/refs.tags.//g") >> $GITHUB_ENV
       # Drafts your next Release notes as Pull Requests are merged into "master"
-      - uses: release-drafter/release-drafter@v5.23.0
+      - uses: release-drafter/release-drafter@v5.24.0
         with:
           tag: ${{ env.TAG }}
           name: ${{ env.TAG }}
